@@ -1,3 +1,4 @@
+
 Angular Docs:
 https://angular.io/docs
 
@@ -19,6 +20,10 @@ https://www.mdcalc.com/calc/78/meld-score-model-end-stage-liver-disease-12-older
 Component Hierarchy/Component Thinking in UI(Angular):
 https://reactjs.org/docs/thinking-in-react.html
 
+Pipes:
+https://angular.io/guide/pipes
+
+
 
 Commands:
 1. Install node	(node is the prerequiste)
@@ -28,3 +33,32 @@ Commands:
 4. on terminal opened from VS code, run the script:
 	 npm run start 	// (check package.json for this scripts/commands. This script is to build and deploy application on browser.  Also make sure to run script in 
                         //folder where this json file is there).
+5. check the chrome: http://localhost:4200/ [Enable Dev Tools and check]
+	also if needed install extension to chrome: angular-devtools
+	https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh/related
+6. npm run build ---> to create distributible package.					
+
+						
+stackoverflow links:
+----------------------
+git push failed as offical git user account was considered for pushing the changes. Fix:
+https://stackoverflow.com/questions/38549834/how-do-i-sign-out-in-the-git-bash-console-in-windows/38553149#38553149
+
+
+meldCalculator.component.html
+-------------------------------
+Event binding eg:
+	<input #bilirubin_editBox type="text" (input)="setBilirubin(bilirubin_editBox.value)"/>
+
+template ref variable eg:
+	#inr_editbox
+
+interpolation  grammar eg:
+	<td>Meld Score is :{{meldScore}}</td>
+	
+property binding eg:
+[value]="creatinine"/>
+
+Pipes(or Transformers)eg:
+[value]="creatinine | DefaultValuePipe" /> 
+Here DefaultValuePipe is custom Pipe written.

@@ -1,0 +1,30 @@
+Angular Docs:
+https://angular.io/docs
+
+Angular CLI interface:
+https://angular.io/cli
+
+To see how transpiler works? Paste a sample TS code in following typescript playground and see in JS:
+https://www.typescriptlang.org/play
+
+Venu's git hub:
+https://github.com/venu-shastri/pic-nov-2022/
+
+Bipin' github:
+https://github.com/bipinkris/pic-bip-node-basics
+
+Mockup/UX inputs(sample application):
+https://www.mdcalc.com/calc/78/meld-score-model-end-stage-liver-disease-12-older
+
+Component Hierarchy/Component Thinking in UI(Angular):
+https://reactjs.org/docs/thinking-in-react.html
+
+
+Commands:
+1. Install node	(node is the prerequiste)
+2. npm install -g @angular/cli	(install angular client. npm is node package manager)
+    Note: ng  is the angular client which is getting installed.
+3. ng new my-first-proj-ang  (creating a project workspace)
+4. on terminal opened from VS code, run the script:
+	 npm run start 	// (check package.json for this scripts/commands. This script is to build and deploy application on browser.  Also make sure to run script in 
+                        //folder where this json file is there).

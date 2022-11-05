@@ -11,6 +11,9 @@ https://www.typescriptlang.org/play
 Venu's git hub:
 https://github.com/venu-shastri/pic-nov-2022/
 
+Venu's Docs - Angular Building Blocks:
+https://github.com/venu-shastri/angular-building-blocks
+
 Bipin' github:
 https://github.com/bipinkris/pic-bip-node-basics
 
@@ -22,6 +25,10 @@ https://reactjs.org/docs/thinking-in-react.html
 
 Pipes:
 https://angular.io/guide/pipes
+
+Lifecycle Hooks:
+https://angular.io/guide/lifecycle-hooks
+
 
 
 
@@ -37,8 +44,17 @@ Commands:
 	also if needed install extension to chrome: angular-devtools
 	https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh/related
 6. npm run build ---> to create distributible package.					
+7. Command to generate a componenet(bmiCalculator) with a selector(bmi-calc) inside a module(calculators)
+	ng g c calculators/bmiCalculator --selector bmi-calc -m calculators
+	
+	Node.js version v17.9.1 detected.
+	Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.html (29 bytes)
+	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.spec.ts (649 bytes)
+	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.ts (296 bytes)
+	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.css (0 bytes)
+	UPDATE src/app/calculators/calculators.module.ts (536 bytes)				
 
-						
 stackoverflow links:
 ----------------------
 git push failed as offical git user account was considered for pushing the changes. Fix:

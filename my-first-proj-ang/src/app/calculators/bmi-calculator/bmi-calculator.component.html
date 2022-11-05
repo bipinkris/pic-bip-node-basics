@@ -1,0 +1,42 @@
+<!--Content-->
+<fieldset>
+    <legend>BMI Calcuat</legend>
+    <table>
+        <tr>
+            <td>Height</td>
+                <td>
+                    <input type="text" name="heightTextBox" 
+                    [(ngModel)] ="height" #heightFormControlRef="ngModel"
+                    required pattern="\d{2}"/>
+                </td>
+                <td>
+                    <p> IsTextBox Prestine {{heightFormControlRef.touched}}</p>
+                    <p> IsTextBox Dirty {{heightFormControlRef.dirty}}</p>
+                    <p> IsTextBox valid {{heightFormControlRef.valid}}</p>
+                    <p> IsTextBox value {{heightFormControlRef.value}}</p>
+                    <div *ngIf="heightFormControlRef.errors && (heightFormControlRef.dirty||heightFormControlRef.touched)" >
+                        <p> textbox is in error state</p>
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+                <td>
+                    <!--[(ngModel)]="weight"-->
+                    <input type="text" [(ngModel)] ="weight"/> <!-- new FormControl-->
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)="calculateBMI()"> Calculate</button>
+            </td>
+            <td>
+                <button (click)="reset()"> Clear</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Points:</td>
+            <td>BMI Score is :{{bmiScore}}</td>
+        </tr>
+    </table>
+</fieldset>

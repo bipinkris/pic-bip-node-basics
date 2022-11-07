@@ -10,6 +10,7 @@ export class MeldCalculatorComponent{
     total_bil:number=0;
     INR:number=0;
     meldScore:number=0;
+    sodium:number=0;
 
     @ViewChild("creatinine_editBox")
     textBoxReference_creatinine:any;
@@ -44,5 +45,6 @@ export class MeldCalculatorComponent{
 
     calculateMeldScore(){
         this.meldScore= 9.57 * Math.log(this.creatinine) + 3.78 * Math.log (this.total_bil) + 11.2 * Math.log (this.INR) + 6.43;
+        console.log("sodium invoked",this.sodium);
     }
 }

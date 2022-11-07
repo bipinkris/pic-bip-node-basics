@@ -54,6 +54,8 @@ Commands:
 	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.ts (296 bytes)
 	CREATE src/app/calculators/bmi-calculator/bmi-calculator.component.css (0 bytes)
 	UPDATE src/app/calculators/calculators.module.ts (536 bytes)				
+8. Instal Materials of Angular:
+	ng add @angular/material
 
 stackoverflow links:
 ----------------------
@@ -78,3 +80,7 @@ property binding eg:
 Pipes(or Transformers)eg:
 [value]="creatinine | DefaultValuePipe" /> 
 Here DefaultValuePipe is custom Pipe written.
+
+
+
+when ngOnChanges called multiple times?

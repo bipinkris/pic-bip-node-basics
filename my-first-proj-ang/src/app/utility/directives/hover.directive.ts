@@ -2,7 +2,7 @@
 import { Directive, ElementRef, HostListener, Input, OnChanges, OnInit, Renderer2, SimpleChanges } from "@angular/core";
 
 @Directive({
-    selector:'[hover]'
+    selector:'[hoverd]'
 })
 
 export class HoverDirective implements OnInit,OnChanges{
@@ -15,8 +15,7 @@ export class HoverDirective implements OnInit,OnChanges{
 
     //Dependency Injection
     constructor(private targetElement:ElementRef,private domApi: Renderer2){
-        console.log("HoverDirective const ",this.hover);
-        //domApi.setStyle(targetElement.nativeElement,"color",this.defaultColorValue);
+        console.log("HoverDirective const ",this.hover);              
     }
 
     ngOnInit(): void {

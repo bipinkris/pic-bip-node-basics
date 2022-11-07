@@ -1,0 +1,35 @@
+<fieldset>
+    <legend> Feedback Form</legend>
+    <form [formGroup]="feedbackForm" (ngSubmit)='submitFeedback()'>
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="text" formControlName="email"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Subject:</td>
+            <td>
+                <input type="subject" formControlName="subject"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td>
+                <input type="Message" formControlName="message"/>
+            </td>
+        </tr>
+        <tr>           
+            <td>
+                <input type="submit"/>
+            </td>
+        </tr>
+        
+    </table>
+</form>
+</fieldset>
+<p *ngIf="feedbackForm.controls['email'].errors?.['required']">
+    Error
+</p>
+    

@@ -39,6 +39,17 @@
                 [value]="INR | DefaultValue"/>
             </td>
         </tr>
+        
+        <tr>
+            <td>Sodium</td>
+            <td>
+                <input type="text"  [(ngModel)] ="sodium" #sodiumFormControlRef="ngModel"/>
+                <div *ngIf="sodiumFormControlRef.value>100" >
+                    <p> textbox is in error state</p>
+                </div>
+            </td>
+        </tr>
+
         <tr>
             <td>
                 <button (click)="calculateMeldScore()"> Calculate</button>

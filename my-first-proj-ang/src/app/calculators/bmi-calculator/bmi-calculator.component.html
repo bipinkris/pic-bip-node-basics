@@ -10,13 +10,14 @@
                     required pattern="\d{2}"/>
                 </td>
                 <td>
-                    <p> IsTextBox Prestine {{heightFormControlRef.touched}}</p>
-                    <p> IsTextBox Dirty {{heightFormControlRef.dirty}}</p>
-                    <p> IsTextBox valid {{heightFormControlRef.valid}}</p>
-                    <p> IsTextBox value {{heightFormControlRef.value}}</p>
+                    <p> IsTextBox Prestine: {{heightFormControlRef.touched}}</p>
+                    <p> IsTextBox Dirty: {{heightFormControlRef.dirty}}</p>
+                    <p> IsTextBox valid: {{heightFormControlRef.valid}}</p>
+                    <p> IsTextBox value: {{heightFormControlRef.value}}</p>
                     <div *ngIf="heightFormControlRef.errors && (heightFormControlRef.dirty||heightFormControlRef.touched)" >
                         <p> textbox is in error state</p>
                     </div>
+                    <p *ngIf="heightFormControlRef.errors && heightFormControlRef.errors['required']">TextBox Requires Value</p>                       
                 </td>
         </tr>
         <tr>

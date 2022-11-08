@@ -57,6 +57,10 @@ Commands:
 8. Instal Materials of Angular:
 	ng add @angular/material
 
+	Examples: Materials used for Login Page in sample project:
+	https://material.angular.io/components/form-field/overview
+	https://material.angular.io/components/button/examples
+
 stackoverflow links:
 ----------------------
 git push failed as offical git user account was considered for pushing the changes. Fix:

@@ -10,12 +10,12 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  hide = true;
   loginForm:FormGroup;
   constructor() { 
     this.loginForm = new FormGroup({
       userName:new FormControl('',Validators.required),
-      password: new FormControl()
+      password: new FormControl('',[Validators.minLength(8),Validators.required])
     })
 
   }
@@ -24,13 +24,15 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log(this.loginForm);
+    console.log("login called");
+    alert(this.loginForm.controls["userName"].value)
+    //console.log(this.loginForm);
     //this.logger.write(this.loginForm.controls["userName"].value);
   }
 
   
   clear(){
+    console.log("clear called");
     this.loginForm.reset();
   }
-
 }

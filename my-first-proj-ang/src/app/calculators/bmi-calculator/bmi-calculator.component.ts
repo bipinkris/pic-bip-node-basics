@@ -14,9 +14,7 @@ import { ILogger } from 'src/app/services/logger.contract';
 export class BmiCalculatorComponent implements OnInit {
 
   bmiScore:number=0;
-  height:number = 0;
-  weight:number =0;
-
+  
   constructor(private calcRef:BmiCalculatorService,
     @Inject("logger") private logger:ILogger) { }
 
@@ -24,16 +22,14 @@ export class BmiCalculatorComponent implements OnInit {
   }
 
 
-  calculateBMI(){
-  //  this.bmiScore = this.height*this.weight;
-  this.logger.write("BmiCalculatorComponent.calculateBMI call");
-  this.bmiScore = this.calcRef.calculateBMI(this.height,this.weight);
+  calculateBMIScore(height:number, weight:number){  
+  this.logger.write("BmiCalculatorComponent:calculateBMIScore Invokes BmiCalculatorService BMI calculation");
+  this.bmiScore = this.calcRef.calculateBMI(height,weight);
   }
 
-  reset(){
-    this.bmiScore = 0;
-    this.height = 0;
-    this.weight = 0;
+  setCalculatorInput(data:any){
+    console.log("BmiCalculatorComponent:setCalculatorInput Received Event with Height,Weight");
+    this.calculateBMIScore(data.heightIp,data.weightIp);
   }
 
 }

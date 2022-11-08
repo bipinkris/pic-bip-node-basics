@@ -1,0 +1,61 @@
+<p>####meld-calculator-input works!####</p>
+
+<table>
+        <tr>
+            <td>Dialysis at least twice in the past week
+                Or CVVHD for ≥24 hours in the past week</td>
+                <td>
+                    <input type="radio" id="r1" name="dialysis_option" value="Yes">
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="r2" name="dialysis_option" value="No">
+                    <label for="No">No</label><br>
+                </td>
+        </tr>
+        <tr>
+            <td>Creatinine
+                Cr &gt 4.0 mg/dL is automatically assigned a value of 4.0</td>
+                <td>
+                    <input 
+                    #creatinine_editBox type="text" 
+                    id="creatinine"
+                    (input)="setCreatinine(creatinine_editBox.value)"
+                    [value]="creatinine | DefaultValue" />
+                </td>
+        </tr>
+        <tr>
+            <td>Bilirubin</td>
+            <td>
+                <input #bilirubin_editBox type="text" 
+                (input)="setBilirubin(bilirubin_editBox.value)"
+                [value]="total_bil | DefaultValue"/>
+            </td>
+        </tr>
+        <tr>
+            <td>INR</td>
+            <td>
+                <input #inr_editbox type="text" 
+                (input)="setINR(inr_editbox.value)"
+                [value]="INR | DefaultValue"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Sodium</td>
+            <td>
+                <input type="text"  [(ngModel)] ="sodium" #sodiumFormControlRef="ngModel"/>
+                <div *ngIf="sodiumFormControlRef.value>100" >
+                    <p> textbox is in error state</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button (click)="calculateMeldScore()"> Calculate</button>
+            </td>
+            <td>
+                <button (click)="reset()"> Clear</button>
+            </td>
+        </tr>
+
+    </table>

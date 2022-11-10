@@ -10,11 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsoleLoggerService } from "./services/consoleLogger.service";
 import { ILogger } from "./services/logger.contract";
 import { ApiLoggerService } from "./services/apiLogger.service";
+import { ReportsModule } from "./reports/reports.module";
 
 @NgModule({
     declarations:[AppComponent],
     bootstrap:[AppComponent],
-    imports:[BrowserModule,CalculatorsModule,UtilityModule,AccountsModule, BrowserAnimationsModule],   
+    imports:[BrowserModule,CalculatorsModule,UtilityModule,AccountsModule, BrowserAnimationsModule,ReportsModule],   
     providers:[
         {provide:"logger" ,useClass:ApiLoggerService},
         //{provide:"logger",useValue:new ConsoleLoggerService()},
